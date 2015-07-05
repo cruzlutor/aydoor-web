@@ -14,7 +14,7 @@
         <div class="form-group">
             <label>Cantidad de horas</label>
             <select ng-change="calculate()" ng-model="booking.amount" class="form-control">
-                <option value="1">1</option>
+                <option value="1" ng-selected="true">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
@@ -54,7 +54,7 @@
         <h1 class="page-title">{{data.service.name}}</h1>
 
         <div class="UserService-user">
-            <img class="Avatar" src="http://10.0.0.173:8081{{data.user_provider.avatar}}">
+            <img class="Avatar" src="http://localhost:8081{{data.user_provider.avatar}}">
             <div class="UserService-user-info">
                 <div class="UserService-user-name">
                     {{data.user_provider.first_name}} {{data.user_provider.last_name}}

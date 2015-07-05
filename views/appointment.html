@@ -9,7 +9,7 @@
     <div ng-show="bookingList.length > 0" class="Appointment-list">
 
         <div class="Appointment-booking" ng-repeat="booking in bookingList">
-            <img src="http://10.0.0.173:8081{{booking.user_provider.avatar}}"  class="Avatar x3 Appointment-booking-avatar">
+            <img src="http://localhost:8081{{booking.user_provider.avatar}}"  class="Avatar x3 Appointment-booking-avatar">
             <div class="Appointment-booking-info">
                 <h4>{{booking.user_provider.first_name}} {{booking.user_provider.last_name}}</h4>
                 <div class="Appointment-booking-service">{{booking.service.name}}</div>

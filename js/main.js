@@ -118,6 +118,6 @@ aydoor.controller('nav', function($scope, $rootScope, $location, AuthManager){
 
 
 aydoor.constant('Config', {
-    API: 'http://10.0.0.173:8081/api/',
-    MEDIA: 'http://10.0.0.173:8081/api/',
+    API: 'http://localhost:8081/api/',
+    MEDIA: 'http://localhost:8081/api/',
 })

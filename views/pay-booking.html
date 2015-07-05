@@ -36,22 +36,30 @@
     <div class="row">
         <div class="col-xs-4">
             <label>Expiración</label>
-            <select ng-change="calculate()" ng-model="cc.month" class="form-control">
-                <option value="1">MM</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+            <select ng-change="calculate()" ng-model="cc.month" class="form-control" ng-init="cc.month">
+                <option value="?" ng-selected="true">MM</option>
+                <option value="1">01</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
             </select>
         </div>
         <div class="col-xs-5">
             <label>&nbsp;</label>
             <select ng-change="calculate()" ng-model="cc.year" class="form-control">
-                <option value="1">YYYY</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="?" ng-selected="true">YYYY</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>                
             </select>
         </div>
         <div class="text-right col-xs-3">
