@@ -25,7 +25,7 @@
     <section>
 
     <br>
-    <h2 class="page-title">Informacion de pago</h2>
+    <h2 class="page-title">Información de pago</h2>
 
     <div class="row">
         <div class="form-group col-xs-12">
@@ -35,7 +35,7 @@
     </div>            
     <div class="row">
         <div class="col-xs-4">
-            <label>Expiracion</label>
+            <label>Expiración</label>
             <select ng-change="calculate()" ng-model="cc.month" class="form-control">
                 <option value="1">MM</option>
                 <option value="2">2</option>
@@ -62,7 +62,7 @@
 
     <br>
 
-    <h2 class="page-title">Informacion de entrega</h2>
+    <h2 class="page-title">Información de entrega</h2>
 
     <div class="form-group">
         <label>Fecha</label>
@@ -70,13 +70,13 @@
     </div>
 
     <div class="form-group">
-        <label>Direccion</label>
+        <label>Dirección</label>
         <input ng-model="booking.address" type="text" class="form-control" placeholder="">
     </div>
 
     <div class="form-group">
         <label>Comentario adicional</label>
-        <textarea ng-model="booking.comment" rows="3" class="form-control"></textarea>
+        <textarea ng-model="booking.comment" rows="3" class="form-control" placeholder="Saluda al proovedor, comentale las dudas adicionales que tengas"></textarea>
     </div>
 
     <button ng-click="payment()" type="submit" class="btn btn-danger">Realizar pago</button>

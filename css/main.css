@@ -80,14 +80,22 @@
 }
 .Search-list .Service-container {
   margin: 10px;
-  padding: 10px;
+  padding: 40px 0;
   border: 1px #ccc solid;
   text-align: center;
   min-height: 250px;
 }
 .Search-list .Service-avatar {
   display: block;
-  margin: 30px auto;
+  margin: 0 auto;
+}
+.Search-list .Service-user-name {
+  margin: 20px 0 0;
+}
+.Search-list .Service-user-feedback {
+  margin: 6px 0 20px;
+  color: #6aa31f;
+  font-weight: bold;
 }
 .Search-list .Service-price {
   width: 180px;
@@ -122,6 +130,30 @@
   padding-right: 30px;
   margin-right: 300px;
   border-right: 1px #ddd solid;
+}
+.UserService-user {
+  overflow: hidden;
+}
+.UserService-user .Avatar {
+  float: left;
+}
+.UserService-user-info {
+  margin-left: 120px;
+}
+.UserService-user-name {
+  margin: 12px 0;
+  font-size: 2rem;
+}
+.UserService-user-feedback {
+  margin: 6px 0 20px;
+  color: #6aa31f;
+  font-weight: bold;
+}
+.UserService-description {
+  border-top: 1px #ddd solid;
+  border-bottom: 1px #ddd solid;
+  padding: 20px 0;
+  margin: 20px 0;
 }
 .PayBooking {
   width: 340px !important;

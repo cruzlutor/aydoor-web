@@ -2,13 +2,22 @@
 
     <h1 class="page-title">{{filter.service_name}}</h1>
 
-    <div class="Search-list">
+
+    <div ng-show="serviceList.length == 0" class="Empty-list">
+        Aun no hay servicios para tus criterios de busqueda
+    </div>
+
+    <div ng-show="serviceList.length > 0" class="Search-list" >
 
         <div class="Service" ng-repeat="service in serviceList">
 
             <div class="Service-container">
 
                 <img src="http://10.0.0.173:8081{{service.user_provider.avatar}}"  class="Service-avatar Avatar">
+
+                <div class="Service-user-name">{{service.user_provider.first_name}} {{service.user_provider.last_name}}</div>
+                
+                <div class="Service-user-feedback">95% positivas</div>
 
                 <a class="Service-price btn btn-primary" href="/#/user-service/{{service.id}}">Contratar por ${{service.price}} hr</a>
 

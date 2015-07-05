@@ -53,14 +53,30 @@
     <div class="UserService-detail">
         <h1 class="page-title">{{data.service.name}}</h1>
 
-        <div clas="UserService-user">
+        <div class="UserService-user">
             <img class="Avatar" src="http://10.0.0.173:8081{{data.user_provider.avatar}}">
+            <div class="UserService-user-info">
+                <div class="UserService-user-name">
+                    {{data.user_provider.first_name}} {{data.user_provider.last_name}}
+                </div>
+                <div class="UserService-user-feedback">95% positivas</div>
+            </div>
+
         </div>
 
-        <div clas="UserService-description">
-            <strong>Descripcion del servicio</strong><br>
+        <div class="UserService-description">
+            <h3>Descripción del servicio</h3>
             {{data.description}}
         </div>
+
+        <div class="UserService-feedback">
+            <h3>Opiniones</h3>
+
+            <div class="Empty-list">
+                Este servicio aun no tiene calificaciones
+            </div>
+        </div>
+
     </div>
 
 </div>
