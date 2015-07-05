@@ -1,0 +1,66 @@
+<div class="UserService wrapper">
+
+    <div class="UserService-booking">
+        <h1 class="page-title">Reserva una cita</h1>
+
+        <div class="form-group">
+            <label>Fecha</label>
+            <input ng-model="booking.date" type="date" class="form-control" placeholder="Fecha">
+        </div>
+        <div class="form-group">
+            <label>Hora aprox.</label>
+            <input ng-model="booking.time" type="time" class="form-control" placeholder="">
+        </div>
+        <div class="form-group">
+            <label>Cantidad de horas</label>
+            <select ng-change="calculate()" ng-model="booking.amount" class="form-control">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+
+        <div class="UserService-costs">
+
+            <div class="row">
+                <div class="col-xs-7">Valor por hora</div>
+                <div class="text-right col-xs-5">{{data.price}} $</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-7">Valor x{{service.book.amount}} horas</div>
+                <div class="text-right col-xs-5">{{billing.amount}} $</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-7">Cargo servicio </div>
+                <div class="text-right col-xs-5">{{billing.service}} $</div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-7"><strong>Total</strong></div>
+                <div class="text-right col-xs-5"><strong>{{billing.total}} $</strong></div>
+            </div>
+
+            <button ng-click="booking()" type="submit" class="btn btn-danger">Reservar</button>
+        </div>
+
+    </div>
+
+
+    <div class="UserService-detail">
+        <h1 class="page-title">{{data.service.name}}</h1>
+
+        <div clas="UserService-user">
+            <img class="Avatar" src="http://10.0.0.173:8081{{data.user_provider.avatar}}">
+        </div>
+
+        <div clas="UserService-description">
+            <strong>Descripcion del servicio</strong><br>
+            {{data.description}}
+        </div>
+    </div>
+
+</div>

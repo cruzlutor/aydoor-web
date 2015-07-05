@@ -1,0 +1,21 @@
+<div class="Search wrapper">
+
+    <h1 class="page-title">{{filter.service_name}}</h1>
+
+    <div class="Search-list">
+
+        <div class="Service" ng-repeat="service in serviceList">
+
+            <div class="Service-container">
+
+                <img src="http://10.0.0.173:8081{{service.user_provider.avatar}}"  class="Service-avatar Avatar">
+
+                <a class="Service-price btn btn-primary" href="/#/user-service/{{service.id}}">Contratar por ${{service.price}} hr</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,84 @@
+<div class="PayBooking wrapper">
+
+    <h2 class="page-title">Resumen del pedido</h2>
+
+    <section class="PayBooking-resume">
+        <div class="row">
+            <div class="col-xs-7">Valor por hora</div>
+            <div class="text-right col-xs-5">{{data.price}} $</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-7">Valor x{{booking.amount}} horas</div>
+            <div class="text-right col-xs-5">{{billing.amount}} $</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-7">Cargo servicio </div>
+            <div class="text-right col-xs-5">{{billing.service}} $</div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-7"><strong>Total</strong></div>
+            <div class="text-right col-xs-5"><strong>{{billing.total}} $</strong></div>
+        </div>
+    <section>
+
+    <br>
+    <h2 class="page-title">Informacion de pago</h2>
+
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <label>Numero de tarjeta</label>
+            <input ng-model="cc.number" type="text" class="form-control" placeholder="#### #### #### ####">
+        </div>            
+    </div>            
+    <div class="row">
+        <div class="col-xs-4">
+            <label>Expiracion</label>
+            <select ng-change="calculate()" ng-model="cc.month" class="form-control">
+                <option value="1">MM</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="col-xs-5">
+            <label>&nbsp;</label>
+            <select ng-change="calculate()" ng-model="cc.year" class="form-control">
+                <option value="1">YYYY</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="text-right col-xs-3">
+            <label>CVC</label>
+            <input ng-model="cc.cvc" type="text" class="form-control" placeholder="000">
+        </div>
+    </div>
+
+    <br>
+
+    <h2 class="page-title">Informacion de entrega</h2>
+
+    <div class="form-group">
+        <label>Fecha</label>
+        <div>10/10/2015 02:00 PM</div>
+    </div>
+
+    <div class="form-group">
+        <label>Direccion</label>
+        <input ng-model="booking.address" type="text" class="form-control" placeholder="">
+    </div>
+
+    <div class="form-group">
+        <label>Comentario adicional</label>
+        <textarea ng-model="booking.comment" rows="3" class="form-control"></textarea>
+    </div>
+
+    <button ng-click="payment()" type="submit" class="btn btn-danger">Realizar pago</button>
+
+</div>

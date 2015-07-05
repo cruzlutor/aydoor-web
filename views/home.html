@@ -1,0 +1,25 @@
+<div class="Home Central">
+    
+    <div class="Home-search">
+
+        <div class="Home-search-cover">
+
+            <form class="Home-search-form Central-form" ng-submit="search()">
+                <h1>Busca servicios a domicilio</h1>
+                <div class="form-group">
+                    <input type="hidden" ng-model="data.service.id">
+                    <ng-autocomplete detail="service"></ng-autocomplete>
+                </div>
+
+                <div class="form-group">
+                    <input ng-model="data.city" type="text" class="form-control" placeholder="En que ciudad estas?">
+                </div>
+
+                <button type="submit" class="btn btn-success">Buscar</button>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>

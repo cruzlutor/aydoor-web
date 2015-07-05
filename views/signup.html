@@ -1,0 +1,31 @@
+<div class="Signup Central">
+
+    <form class="Central-form" ng-submit="signup()">
+
+        <h1 class="page-title">Registro</h1>
+
+        <div class="form-group">
+            <input ng-model="data.first_name" type="text" class="form-control" placeholder="Primer nombre">
+        </div>
+
+        <div class="form-group">
+            <input ng-model="data.last_name" type="text" class="form-control" placeholder="Segundo nombre">
+        </div>
+
+        <div class="form-group">
+            <input ng-model="data.username" type="email" class="form-control" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <input ng-model="data.password" type="password" class="form-control" placeholder="Password">
+        </div>
+
+        <div class="form-group">
+            <input ng-model="data.city" type="text" class="form-control" placeholder="En que ciudad vives?">
+        </div>
+
+        <button type="submit" class="btn btn-success">Registrarme</button>
+
+    </form>
+
+</div>
